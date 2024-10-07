@@ -19,5 +19,6 @@ if __name__ == "__main__":
     data = [generate_expression() for _ in range(data_len)]
 
     with open(output_file, 'w') as f:
+        f.write(f"num1,operation,num2,result\n")
         for expression, result in data:
             f.write(f"{expression},{result}\n")
